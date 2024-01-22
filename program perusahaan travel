@@ -1,0 +1,118 @@
+
+#include <iostream>
+using namespace std;
+int main(){
+ string namapembeli, jurusan, jenisbus, bonus;
+ int hargatiket, jumlahtiket, jumlahbayar, diskon, totalharga;
+ cout<<"Program Perusahaan Travel"<<endl;
+ cout<<"=========================="<<endl;
+ cout<<"Nama pembeli :";
+ getline(cin,namapembeli);
+ cout<<"Jurusan (Bandung/Jakarta) :";
+ cin>>jurusan;
+ cout<<"Jenis bus (ac/nonac/se) :";
+ cin>>jenisbus;
+ cout<<"Jumlah tiket :";
+ cin>>jumlahtiket;
+ if(jumlahtiket>=3){
+     if (jurusan=="Bandung"){
+   if(jenisbus=="nonac"){
+   		hargatiket=90000;
+    	jumlahbayar=hargatiket * jumlahtiket;
+    	diskon=0.15*jumlahbayar;
+    	totalharga=jumlahbayar - diskon;
+   		bonus="tidak ada";
+  }else if(jenisbus=="ac"){
+    	hargatiket=150000;
+    	jumlahbayar=hargatiket * jumlahtiket;
+   		diskon=0.15*jumlahbayar;
+    	totalharga=jumlahbayar - diskon;
+    	bonus="2x snack box";
+	}else{
+    	hargatiket=225000;
+    	jumlahbayar=hargatiket * jumlahtiket;
+    	diskon=0.15*jumlahbayar;
+    	totalharga=jumlahbayar - diskon;
+    	bonus="2x snack box + 4 makan";
+}
+   }else if (jurusan=="Jakarta"){
+   if(jenisbus=="nonac"){
+    	hargatiket=70000;
+    	jumlahbayar=hargatiket;
+    	diskon=0.15*jumlahbayar;
+   		totalharga=jumlahbayar - diskon;
+		bonus="tidak ada";
+  }else if(jenisbus=="ac"){
+   		hargatiket=120000;
+    	jumlahbayar=hargatiket * jumlahtiket;
+    	diskon=0.15*jumlahbayar;
+    	totalharga=jumlahbayar - diskon;
+    	bonus="2x snack";
+    }else{
+   		hargatiket=200000;
+    	jumlahbayar=hargatiket * jumlahtiket;
+    	diskon=0.15*jumlahbayar;
+    	totalharga=jumlahbayar - diskon;
+    	bonus="2x snack box + 4 makan";
+     }
+ }
+ }else{
+  if (jurusan=="Bandung"){
+   if(jenisbus=="nonac"){
+   		hargatiket=90000;
+		jumlahbayar=hargatiket * jumlahtiket;
+    	diskon=0;
+		totalharga=jumlahbayar - diskon;
+   		bonus="tidak ada";
+  }else if(jenisbus=="ac"){
+    	hargatiket=150000;
+    	jumlahbayar=hargatiket * jumlahtiket;
+    	diskon=0;
+    	totalharga=jumlahbayar;
+    	bonus="2x snack box";
+    }else{
+    	hargatiket=250000;
+    	jumlahbayar=hargatiket * jumlahtiket;
+    	diskon=0;
+    	totalharga=jumlahbayar;
+    	bonus="2x snack box + 4 makan";
+}
+
+   }if (jurusan=="Jakarta"){
+   if(jenisbus=="nonac"){
+   		hargatiket=70000;
+   		jumlahbayar=hargatiket * jumlahtiket;
+   		diskon=0;
+   		totalharga=jumlahbayar;
+   		bonus="tidak ada";
+  }else if(jenisbus=="ac"){
+   		hargatiket=120000;
+   		jumlahbayar=hargatiket * jumlahtiket;
+   		diskon=0;
+   		totalharga=jumlahbayar;
+   		bonus="2x snack box";
+    }else{
+   		hargatiket=200000;
+    	jumlahbayar=hargatiket * jumlahtiket;
+    	diskon=0;
+    	totalharga=jumlahbayar;
+    	bonus="2x snack box + 4 makan";
+     }
+ }
+
+  
+ }
+ cout<<"==========================="<<endl;
+ cout<<"Nama pembeli :"<<namapembeli<<endl;
+ cout<<"Jurusan :"<<jurusan<<endl;
+ cout<<"Jenis bus :"<<jenisbus<<endl;
+ cout<<"Jumlah tiket :"<<jumlahtiket<<endl;
+ cout<<"Harga tiket :"<<hargatiket<<endl;
+ cout<<"Bonus :"<<bonus<<endl;
+ cout<<"Diskon :"<<diskon<<endl;
+ cout<<"Jumlah bayar :"<<jumlahbayar<<endl;
+ cout<<"Total harga :"<<totalharga<<endl;
+ 
+ return 0;
+
+}
